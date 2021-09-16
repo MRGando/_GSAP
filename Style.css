@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.5em 5em 0 5em;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: transparent;
+}
+
+#header li:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.downarrow {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 60px;
+}
+
+.downarrow img {
+  width: 5em;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  padding: 0 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(src/19.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(src/19.jpg);
+  background-size: cover;
+}
+
+.main img {
+  width: 20em;
+}
+
+.main input {
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+  border: none;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.main input:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.sec2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("src/8.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/8.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.sec2 .content {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+
+.sec3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 24, 26, 0.9)), to(rgba(20, 24, 26, 0.9))), url("src/1.jpg");
+  background: linear-gradient(rgba(20, 24, 26, 0.9), rgba(20, 24, 26, 0.9)), url("src/1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10em;
+}
+
+.sec3 input {
+  margin-top: 20px;
+  background-color: transparent;
+  color: whitesmoke;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.sec3 input:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+p {
+  width: 20em;
+}
+
+.move {
+  margin: 10px 0;
+}
+
+.move:nth-child(1) {
+  margin-left: 0.5em;
+}
+
+.move:nth-child(3) {
+  margin-left: 0.5em;
+  padding: 10px;
+}
+
+svg {
+  width: 200px;
+}
+
+.sec4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5em 7em;
+  background-color: #10171d;
+  overflow: hidden;
+  position: relative;
+}
+
+.sec4 p {
+  line-height: 1.5em;
+  width: 12em;
+}
+
+.sec4::before {
+  content: "";
+  position: absolute;
+  width: 30em;
+  height: 40em;
+  background-color: #070c11;
+  z-index: 0;
+  left: -5em;
+  border-right: 1em dashed #10171d;
+  -webkit-transform: rotateZ(-20deg);
+          transform: rotateZ(-20deg);
+}
+
+.address {
+  z-index: 1;
+}
+
+.location {
+  z-index: 1;
+}
+
+iframe {
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #070c11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 5em;
+}
+
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.loadingPage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #222222;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.loadingPage img {
+  width: 400px;
+}
+
+.active {
+  background-color: whitesmoke;
+  color: black;
+}
+/*# sourceMappingURL=Style.css.map */
