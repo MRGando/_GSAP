@@ -42,11 +42,13 @@ body {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(src/19.jpg);
+    url("src/19.jpg");
   background-size: cover;
   img {
     width: 20em;
+    margin-right: -40px;
   }
+
   input {
     background-color: transparent;
     color: whitesmoke;
@@ -105,16 +107,12 @@ body {
 }
 
 p {
-  width: 20em;
+  max-width: 20em;
 }
 .move {
   margin: 10px 0;
 }
-.move:nth-child(1) {
-  margin-left: 0.5em;
-}
 .move:nth-child(3) {
-  margin-left: 0.5em;
   padding: 10px;
 }
 svg {
@@ -200,6 +198,102 @@ a {
   background-color: whitesmoke;
   color: black;
 }
-
+.bar {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
 //Responsive Design Code
 //working on it ...
+@media only screen and (max-width: 1180px) {
+  .main {
+    justify-content: center;
+  }
+  .sec3 {
+    padding: 0 5em;
+  }
+  .sec4 {
+    padding: 5em 3em;
+  }
+}
+@media only screen and(max-width:942px) {
+  .main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image {
+      display: none;
+    }
+    .content {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .sec3 {
+    padding: 0 2.5em;
+  }
+  .sec4 {
+    padding: 2em 0;
+    flex-direction: column;
+    .location {
+      width: 100%;
+      padding-top: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 70%;
+    }
+  }
+}
+@media only screen and(max-width:814px) {
+  .phone {
+    display: none;
+  }
+}
+@media only screen and(max-width:562px) {
+  .sec3 {
+    padding: 0 10%;
+    .textBox {
+      width: 90%;
+    }
+  }
+  .location {
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    iframe {
+      width: 100%;
+    }
+  }
+}
+@media only screen and(max-width:760px) {
+  #header {
+    padding: 2.5em 2em 0 2em;
+  }
+}
+@media only screen and(max-width:618px) {
+  #header {
+    .menu {
+      //display: none;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+  }
+  .menu i {
+    font-size: 25px;
+  }
+}

@@ -1,5 +1,11 @@
 let header = document.getElementById("header");
 let loadingPage = document.getElementById("loadingPage");
+let homeBtn = document.getElementById("homeBtn");
+let blogBtn = document.getElementById("blogBtn");
+let proBtn = document.getElementById("proBtn");
+let aboutBtn = document.getElementById("aboutBtn");
+let menu = document.getElementById("menu");
+let footer = document.getElementById("footer");
 
 //loading page vanish
 window.addEventListener("load", () => {
@@ -79,15 +85,36 @@ window.addEventListener("load", () => {
   //OnScrollDown
   setInterval(() => {
     if (window.scrollY == 0) {
-      header.style.padding = "2.5em 5em 0 5em";
+      header.style.paddingTop = "2.5em";
       header.style.background = "Transparent";
+      menu.style.backgroundColor = "Transparent";
     } else if (window.scrollY >= 800) {
       header.style.top = "-5em";
     } else {
       header.style.top = "0";
-      header.style.padding = "10px 5em 0 5em";
+      header.style.paddingTop = "10px";
       header.style.background =
         "linear-gradient(rgb(7, 12, 17),rgb(7, 12, 17))";
+      menu.style.background = "black";
+    }
+    //change icon position
+    let width = window.innerWidth;
+    if (width <= 618 && window.scrollY > 0) {
+      header.style.justifyContent = "center";
+    } else if (window.scrollY === 0) {
+      header.style.justifyContent = "space-between";
+    }
+    if (width <= 618) {
+      homeBtn.innerHTML = '<i class="fas fa-home"></i>';
+      blogBtn.innerHTML = '<i class="fas fa-rss"></i>';
+      proBtn.innerHTML = '<i class="fas fa-air-freshener"></i>';
+      aboutBtn.innerHTML = '<i class="far fa-question-circle"></i>';
+      footer.style.paddingBottom = "65px";
+    } else {
+      homeBtn.innerHTML = "Home";
+      blogBtn.innerHTML = "Blog";
+      proBtn.innerHTML = "Products";
+      aboutBtn.innerHTML = "About";
     }
   }, 100);
 });
