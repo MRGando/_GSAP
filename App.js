@@ -95,12 +95,13 @@ window.addEventListener("load", () => {
       header.style.paddingTop = "10px";
       header.style.background =
         "linear-gradient(rgb(7, 12, 17),rgb(7, 12, 17))";
-      menu.style.background = "black";
     }
+
     //change icon position
     let width = window.innerWidth;
     if (width <= 618 && window.scrollY > 0) {
       header.style.justifyContent = "center";
+      menu.style.background = "black";
     } else if (window.scrollY === 0) {
       header.style.justifyContent = "space-between";
     }
