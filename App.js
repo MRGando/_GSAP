@@ -7,8 +7,9 @@ const aboutBtn = document.getElementById("aboutBtn");
 const menu = document.getElementById("menu");
 const footer = document.getElementById("footer");
 const goUpBtn = document.querySelector(".goUp");
+const downArrow = document.querySelector(".downarrow");
 const windowHeight = window.innerHeight;
-//loading page vanish
+//loading page disappear
 window.addEventListener("load", () => {
   loadingPage.style.opacity = "0";
   setTimeout(() => {
@@ -113,12 +114,14 @@ window.addEventListener("load", () => {
     } else if (window.scrollY === 0) {
       header.style.justifyContent = "space-between";
     }
+    //if width of screen is less than 618
     if (width <= 618) {
       homeBtn.innerHTML = '<i class="fas fa-home"></i>';
       blogBtn.innerHTML = '<i class="fas fa-rss"></i>';
       proBtn.innerHTML = '<i class="fas fa-air-freshener"></i>';
       aboutBtn.innerHTML = '<i class="far fa-question-circle"></i>';
       footer.style.paddingBottom = "80px";
+      //other
     } else {
       homeBtn.innerHTML = "Home";
       blogBtn.innerHTML = "Blog";
@@ -135,3 +138,8 @@ goUpBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+//if screen height is less than 572 doesn't show the arrow
+if (screen.height <= 572) {
+  downArrow.style.display = "none";
+}
