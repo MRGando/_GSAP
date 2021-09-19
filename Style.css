@@ -271,6 +271,22 @@ a {
   cursor: pointer;
 }
 
+.goUp {
+  color: black;
+  background-color: whitesmoke;
+  padding: 10px;
+  font-size: 30px;
+  position: fixed;
+  right: 20px;
+  bottom: 2.6em;
+  z-index: 2;
+  border-radius: 5px;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1180px) {
   .main {
     -webkit-box-pack: center;

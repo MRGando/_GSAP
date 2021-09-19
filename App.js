@@ -1,12 +1,13 @@
-let header = document.getElementById("header");
-let loadingPage = document.getElementById("loadingPage");
-let homeBtn = document.getElementById("homeBtn");
-let blogBtn = document.getElementById("blogBtn");
-let proBtn = document.getElementById("proBtn");
-let aboutBtn = document.getElementById("aboutBtn");
-let menu = document.getElementById("menu");
-let footer = document.getElementById("footer");
-
+const header = document.getElementById("header");
+const loadingPage = document.getElementById("loadingPage");
+const homeBtn = document.getElementById("homeBtn");
+const blogBtn = document.getElementById("blogBtn");
+const proBtn = document.getElementById("proBtn");
+const aboutBtn = document.getElementById("aboutBtn");
+const menu = document.getElementById("menu");
+const footer = document.getElementById("footer");
+const goUpBtn = document.querySelector(".goUp");
+const windowHeight = window.innerHeight;
 //loading page vanish
 window.addEventListener("load", () => {
   loadingPage.style.opacity = "0";
@@ -84,13 +85,20 @@ window.addEventListener("load", () => {
 
   //OnScrollDown
   setInterval(() => {
+    //if is at top
     if (window.scrollY == 0) {
+      goUpBtn.style.opacity = "0";
       header.style.paddingTop = "2.5em";
       header.style.background = "Transparent";
       menu.style.backgroundColor = "Transparent";
+
+      //if window's height was 800
     } else if (window.scrollY >= 800) {
       header.style.top = "-5em";
-    } else {
+      goUpBtn.style.opacity = "0.7";
+    }
+    //other
+    else {
       header.style.top = "0";
       header.style.paddingTop = "10px";
       header.style.background =
@@ -118,4 +126,12 @@ window.addEventListener("load", () => {
       aboutBtn.innerHTML = "About";
     }
   }, 100);
+});
+
+//Scroll up on click
+goUpBtn.addEventListener("click", () => {
+  window.scroll({
+    top: -windowHeight,
+    behavior: "smooth",
+  });
 });
