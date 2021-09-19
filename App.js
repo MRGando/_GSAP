@@ -110,7 +110,7 @@ window.addEventListener("load", () => {
       blogBtn.innerHTML = '<i class="fas fa-rss"></i>';
       proBtn.innerHTML = '<i class="fas fa-air-freshener"></i>';
       aboutBtn.innerHTML = '<i class="far fa-question-circle"></i>';
-      footer.style.paddingBottom = "65px";
+      footer.style.paddingBottom = "80px";
     } else {
       homeBtn.innerHTML = "Home";
       blogBtn.innerHTML = "Blog";

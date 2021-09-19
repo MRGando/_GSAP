@@ -203,8 +203,10 @@ a {
   font-size: 30px;
   cursor: pointer;
 }
+
+
 //Responsive Design Code
-//working on it ...
+
 @media only screen and (max-width: 1180px) {
   .main {
     justify-content: center;
@@ -295,5 +297,8 @@ a {
   }
   .menu i {
     font-size: 25px;
+  }
+  .footer {
+    padding: 0 20px;
   }
 }
