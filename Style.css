@@ -271,10 +271,6 @@ a {
   cursor: pointer;
 }
 
-.container {
-  min-width: 500px;
-}
-
 @media only screen and (max-width: 1180px) {
   .main {
     -webkit-box-pack: center;
