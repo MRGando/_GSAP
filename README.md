@@ -8,4 +8,4 @@ GSAP
 HTML
 CSS (SASS)
 
-#_Responsive
+#_isResponsive
