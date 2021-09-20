@@ -143,3 +143,6 @@ goUpBtn.addEventListener("click", () => {
 if (screen.height <= 572) {
   downArrow.style.display = "none";
 }
+
+
+
